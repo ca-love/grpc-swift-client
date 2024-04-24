@@ -8,10 +8,10 @@ Pod::Spec.new do |s|
   s.author           = { 'Kyohei Ito' => 'ito_kyohei@cyberagent.co.jp' }
   s.source           = { :git => 'https://github.com/cats-oss/grpc-swift-client.git', :tag => s.version.to_s }
   s.requires_arc = true
-  s.ios.deployment_target       = '10.0'
-  s.tvos.deployment_target      = '10.0'
-  s.osx.deployment_target       = '10.12'
+  s.ios.deployment_target       = '12.0'
+  s.tvos.deployment_target      = '12.0'
+  s.osx.deployment_target       = '10.14'
   s.source_files     = 'Sources/GRPCClient/**/*.{h,swift}'
   s.module_name      = 'GRPCClient'
-  s.dependency 'gRPC-Swift', '1.0.0-alpha.19'
+  s.dependency 'gRPC-Swift', '1.23.0'
 end
