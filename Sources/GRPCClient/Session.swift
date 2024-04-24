@@ -65,7 +65,7 @@ open class Session: SessionProtocol {
     ) {
         self.headers = headers
         let builder = isTLSRequired
-            ? ClientConnection.secure(group: eventLoopGroup)
+            ? ClientConnection.usingPlatformAppropriateTLS(for: eventLoopGroup)
             : ClientConnection.insecure(group: eventLoopGroup)
 
         self.connection = builder
